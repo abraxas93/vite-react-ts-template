@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import reactLogo from '../shared/assets/react.svg'
 import viteLogo from '/vite.svg'
-import cls from './App.module.scss'
 
 function App() {
   const [count, setCount] = useState(0)
-  console.log(cls)
+
   return (
     <>
       <div>
