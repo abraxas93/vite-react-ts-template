@@ -3,7 +3,7 @@ import reactLogo from '../shared/assets/react.svg'
 import viteLogo from '/vite.svg'
 import './styles/index.scss'
 import { AppLink } from '../shared/ui/AppLink'
-import { AppImg } from '../shared/ui/Image/AppImg'
+import { AppImg } from '../shared/ui/AppImg'
 
 function App() {
   const [count, setCount] = useState(0)
