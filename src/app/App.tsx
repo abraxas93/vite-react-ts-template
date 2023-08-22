@@ -3,6 +3,7 @@ import reactLogo from '../shared/assets/react.svg'
 import viteLogo from '/vite.svg'
 import './styles/index.scss'
 import { AppLink } from '../shared/ui/AppLink'
+import { AppImg } from '../shared/ui/Image/AppImg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,10 +12,10 @@ function App() {
     <>
       <div>
         <AppLink to="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <AppImg src={viteLogo} className="logo" alt="Vite logo" />
         </AppLink>
         <AppLink to="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <AppImg src={reactLogo} className="logo react" alt="React logo" />
         </AppLink>
       </div>
       <h1>Vite + React</h1>
