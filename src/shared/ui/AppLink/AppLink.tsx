@@ -1,5 +1,5 @@
 import { ReactNode, memo } from 'react';
-import { LinkProps, NavLink } from 'react-router-dom';
+import { Link, LinkProps, NavLink } from 'react-router-dom';
 import addClasses from '../../lib/addClasses';
 import cls from './AppLink.module.scss';
 
@@ -21,6 +21,19 @@ export const AppLink = memo((props: AppLinkProps) => {
     activeClassName = '',
     ...otherProps
   } = props;
+
+  const isExternal = to.toString().includes('http');
+
+  if (isExternal) {
+    return (
+      <Link to={to} className={addClasses(cls.AppLink, {}, [
+        className,
+        cls[variant],
+      ])} {...otherProps}>
+        {children}
+      </Link>
+    )
+  }
 
   return (
     <NavLink
