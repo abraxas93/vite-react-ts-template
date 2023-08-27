@@ -32,11 +32,22 @@ const mapSizeToClass: Record<TextSize, string> = {
 };
 
 
-export const Test = memo((props: TextProps) => {
+export const Text = memo((props: TextProps) => {
   const { className, variant = "primary", align = "left", size = "m", title, text, bold } = props;
 
   const HeaderTag = mapSizeToHeaderTag[size];
   const sizeClass = mapSizeToClass[size];
   const cardClasses = [className, cls[variant], cls[align], sizeClass];
-  return <p className={addClasses(cls.Text, {}, cardClasses)}></p>
+  return (
+    <div className={addClasses(cls.Text, { [cls.bold]: bold }, cardClasses)}>
+      {title && (
+        <HeaderTag>
+          {title}
+        </HeaderTag>
+      )}
+      {text && (
+        <p>{text}</p>
+      )}
+    </div>
+  )
 })

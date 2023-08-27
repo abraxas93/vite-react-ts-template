@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './styles/index.scss'
 import { AppLink } from '../shared/ui/AppLink'
 import { AppImg } from '../shared/ui/AppImg'
+import { Text } from '../shared/ui/Text'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Text className="read-the-docs" text="Click on the Vite and React logos to learn more" />
     </>
   )
 }
