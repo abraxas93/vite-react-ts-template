@@ -5,6 +5,7 @@ import './styles/index.scss'
 import { AppLink } from '../shared/ui/AppLink'
 import { AppImg } from '../shared/ui/AppImg'
 import { Text } from '../shared/ui/Text'
+import { Card } from '../shared/ui/Card'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,12 +22,12 @@ function App() {
         </AppLink>
       </div>
       <Text title='Vite + React' size='l' />
-      <div className="card">
+      <Card>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <Text text={codeTxt} />
-      </div>
+      </Card>
       <Text className="read-the-docs" text="Click on the Vite and React logos to learn more" />
     </>
   )
