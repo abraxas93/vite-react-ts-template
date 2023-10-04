@@ -9,5 +9,6 @@ interface ButtonProps {
 }
 
 export const Button = memo((props: ButtonProps) => {
-  return <></>
+  const { className, children } = props;
+  return <button className={addClasses(cls.Primary, {}, [className])}> {children}</ button>
 })
