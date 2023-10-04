@@ -1,14 +1,14 @@
-import { ReactNode, memo } from 'react';
+import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
 
 import addClasses from '../../lib/addClasses';
 import cls from './Button.module.scss';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children?: ReactNode;
 }
 
 export const Button = memo((props: ButtonProps) => {
-  const { className, children } = props;
-  return <button className={addClasses(cls.Primary, {}, [className])}> {children}</ button>
+  const { className, children, ...otherProps } = props;
+  return <button className={addClasses(cls.Primary, {}, [className])} {...otherProps}> {children}</ button>
 })
