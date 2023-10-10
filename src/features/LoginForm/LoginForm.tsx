@@ -7,9 +7,9 @@ interface LoginFormProps {
 export const LoginForm = memo((props: LoginFormProps) => {
   const { children } = props;
   return (
-    <div>
+    <form>
       {children}
-    </div>
+    </form>
   )
 })
 
