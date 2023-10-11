@@ -1,6 +1,8 @@
 import { InputHTMLAttributes, ReactNode, memo, useEffect, useRef, useState } from 'react';
 import cls from './Input.module.scss';
 import addClasses, { Mods } from '../../lib/addClasses';
+import { HStack } from '../Stack/HStack';
+import { Text } from '../Text'
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -87,5 +89,15 @@ export const Input = memo((props: InputProps) => {
       <div className={cls.addonRight}>{rightNode}</div>
     </div>
   );
+
+  if (label) {
+    return (
+      <HStack max gap="8">
+        <Text text={label} />
+        {input}
+      </HStack>
+    );
+  }
+
   return input
 });
