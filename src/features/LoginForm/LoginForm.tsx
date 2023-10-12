@@ -1,3 +1,6 @@
+import { Button } from "@/shared/ui/Button";
+import { Input } from "@/shared/ui/Input/Input";
+import { VStack } from "@/shared/ui/Stack/VStack";
 import { ReactNode, memo } from "react";
 
 interface LoginFormProps {
@@ -7,9 +10,11 @@ interface LoginFormProps {
 export const LoginForm = memo((props: LoginFormProps) => {
   const { children } = props;
   return (
-    <form>
-      {children}
-    </form>
+    <VStack>
+      <Input />
+      <Input />
+      <Button />
+    </VStack>
   )
 })
 
