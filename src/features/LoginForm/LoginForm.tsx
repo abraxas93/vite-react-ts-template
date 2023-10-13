@@ -1,16 +1,17 @@
+import addClasses from "@/shared/lib/addClasses";
 import { Button } from "@/shared/ui/Button";
 import { Input } from "@/shared/ui/Input/Input";
 import { VStack } from "@/shared/ui/Stack/VStack";
-import { ReactNode, memo } from "react";
+import { memo } from "react";
 
 interface LoginFormProps {
-  children?: ReactNode;
+  className?: string;
 }
 
-export const LoginForm = memo((props: LoginFormProps) => {
-  const { children } = props;
+export const LoginForm = memo(({ className }: LoginFormProps) => {
+
   return (
-    <VStack>
+    <VStack className={addClasses('', {}, [className])}>
       <Input />
       <Input />
       <Button />
