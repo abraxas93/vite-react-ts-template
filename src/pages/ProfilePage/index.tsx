@@ -1,10 +1,9 @@
+import { LoginForm } from "../../features/LoginForm";
 
 
 const ProfilePage = () => {
   return (
-    <>
-      Profile Page
-    </>
+    <LoginForm />
   )
 }
 

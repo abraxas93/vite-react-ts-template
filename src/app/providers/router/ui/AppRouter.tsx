@@ -11,7 +11,7 @@ export const AppRouter = memo(() => {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/login' element={<ProfilePage />} />
       </Routes>
     </Suspense>
   )

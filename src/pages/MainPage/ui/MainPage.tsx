@@ -5,7 +5,7 @@ import { AppImg } from '../../../shared/ui/AppImg';
 import { AppLink } from '../../../shared/ui/AppLink';
 import { Button } from '../../../shared/ui/Button';
 import { Card } from '../../../shared/ui/Card';
-import { Text } from '../../../shared/ui/Text'
+import { Text } from '@/shared/ui/Text'
 
 
 const MainPage = () => {

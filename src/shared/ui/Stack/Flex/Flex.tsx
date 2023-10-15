@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
-import addClasses, { Mods } from '@/shared/lib/addClasses';
+import addClasses, { Mods } from '../../../lib/addClasses';
 import cls from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
