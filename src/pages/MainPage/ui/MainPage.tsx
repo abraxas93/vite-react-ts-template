@@ -6,6 +6,7 @@ import { AppLink } from '@/shared/ui/AppLink';
 import { Button } from '@/shared/ui/Button';
 import { Card } from '@/shared/ui/Card';
 import { Text } from '@/shared/ui/Text'
+import { Flex } from '@/shared/ui/Stack/Flex/Flex';
 
 
 const MainPage = () => {
@@ -14,14 +15,14 @@ const MainPage = () => {
   const codeTxt = <>Edit <code>src/App.tsx</code> and save to test HMR</>
   return (
     <>
-      <div>
+      <Flex direction='row' justify='around'>
         <AppLink to="https://vitejs.dev" target="_blank">
           <AppImg src={viteLogo} className="logo" alt="Vite logo" />
         </AppLink>
         <AppLink to="https://react.dev" target="_blank">
           <AppImg src={reactLogo} className="logo react" alt="React logo" />
         </AppLink>
-      </div>
+      </Flex>
       <Text title='Vite + React' size='l' />
       <Card>
         <Button onClick={() => setCount((count) => count + 1)}>
