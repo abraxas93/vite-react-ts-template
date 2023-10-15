@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import reactLogo from '../../../shared/assets/react.svg'
+import { useState } from 'react';
+import reactLogo from '@/shared/assets/react.svg'
 import viteLogo from '/vite.svg'
-import { AppImg } from '../../../shared/ui/AppImg';
-import { AppLink } from '../../../shared/ui/AppLink';
-import { Button } from '../../../shared/ui/Button';
-import { Card } from '../../../shared/ui/Card';
+import { AppImg } from '@/shared/ui/AppImg';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Button } from '@/shared/ui/Button';
+import { Card } from '@/shared/ui/Card';
 import { Text } from '@/shared/ui/Text'
 
 
