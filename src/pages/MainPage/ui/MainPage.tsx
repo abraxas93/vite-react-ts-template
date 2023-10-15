@@ -24,7 +24,7 @@ const MainPage = () => {
         </AppLink>
       </Flex>
       <Text title='Vite + React' size='l' />
-      <Card>
+      <Card className='test test2'>
         <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>
